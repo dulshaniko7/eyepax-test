@@ -31,7 +31,7 @@ export default {
 
 <style scoped>
 .myTable{
-  overflow: hidden;
+  overflow: auto;
   height: 500px;
 }
 </style>

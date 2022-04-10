@@ -24,9 +24,11 @@
 
     <button class="btn btn-success btn-block my-2" type="submit">Login</button>
 
+
+
   </form>
 <div v-if="store.state.errorMsg">
-  <h3 class="text-center">Please Enter the correct password</h3>
+  <h3 class="text-center">Please Enter the correct password //username :admin password :admin</h3>
 </div>
 </div>
 </template>
