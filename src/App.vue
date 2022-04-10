@@ -1,26 +1,39 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+<div id="nav" class="myNav">
+  <router-link to="/">Index |</router-link>
+  <router-link to="/home">ToDo|</router-link>
+  <router-link to="/login" v-if="!isLogged">Login |</router-link>
+  <router-link to="/logout" v-if="isLogged" >LogOut|</router-link>
+</div>
+    <transition name="router-animate" enter-active-class="animated fadeInDown" leave-active-class="animated fadeInDown">
+  <router-view />
+    </transition>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Store from '@/store'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+
+  },
+  computed : {
+    isLogged(){
+      return Store.state.logedIn
+    }
+  },
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import "https://cdn.jsdelivr.net/npm/animate.css@3.5.1";
+.myNav{
+  margin-bottom: 50px;
+  font-size:30px;
+
 }
 </style>
