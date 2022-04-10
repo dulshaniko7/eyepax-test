@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="container">
-    <h1 class="text-center mt-4">{{description.title}} </h1>
+    <h1 class="text-center mt-4"> This is the item {{description.id}} : {{description.title}} </h1>
     </div>
 </div>
 </template>

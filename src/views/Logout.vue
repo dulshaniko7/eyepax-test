@@ -4,10 +4,11 @@
 
 <script>
 import router from '@/index'
+import store from "@/store";
 export default {
   name: "Logout",
   mounted() {
-    console.log("mounted")
+    store.state.logedIn = false
     router.push({name:'Login'})
   }
 }

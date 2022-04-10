@@ -1,7 +1,7 @@
 <template>
   <div class="container">
 <div id="nav" class="myNav">
-  <router-link to="/">Index |</router-link>
+
   <router-link to="/home">ToDo|</router-link>
   <router-link to="/login" v-if="!isLogged">Login |</router-link>
   <router-link to="/logout" v-if="isLogged" >LogOut|</router-link>

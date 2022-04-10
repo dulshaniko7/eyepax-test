@@ -18,6 +18,7 @@ const store = createStore({
             }else{
 
                 state.errorMsg = true
+
             }
         }
     },
