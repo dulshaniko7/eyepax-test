@@ -30,6 +30,7 @@
 <div v-if="store.state.errorMsg">
   <h3 class="text-center">Please Enter the correct password //username :admin password :admin</h3>
 </div>
+  <p class="note"> // Added vuex state management too couldnt have the time to implement pagination.   </p>
 </div>
 </template>
 
@@ -62,5 +63,8 @@ export default {
 </script>
 
 <style scoped>
-
+.note{
+  margin-top: 90px;
+  color: gray;
+}
 </style>
