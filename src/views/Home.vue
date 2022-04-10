@@ -1,6 +1,6 @@
 <template>
 <div>
-      <Todo v-bind:todos="todos"/>
+      <Todo v-bind:todos="todos"  />
 </div>
 
 </template>
@@ -9,20 +9,36 @@
 import axios from "axios"
 import Todo from "@/components/Todo";
 
+
+
+
 export default {
   name: "Home",
 
-  components: {Todo},
+  components: { Todo},
+
   data(){
     return{
-      todos: []
+      todos: [],
+
     }
   },
-  mounted() {
+  created() {
     axios.get("https://jsonplaceholder.typicode.com/todos")
         .then(response => this.todos = response.data)
         .catch(error => console.log(error))
-  }
+  },
+
+  /*
+  computed: {
+    computedTableData () {
+        const firstIndex = (this.pagination.page - 1) * this.pagination.perPage
+        const lastIndex = this.pagination.page * this.pagination.perPage
+        return this.todos.slice(firstIndex, lastIndex)
+      }
+
+  },
+*/
 }
 </script>
 
